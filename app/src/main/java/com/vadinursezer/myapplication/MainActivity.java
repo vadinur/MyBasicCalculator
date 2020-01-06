@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -13,6 +14,10 @@ public class MainActivity extends AppCompatActivity {
     EditText numberText1;
     EditText numberText2;
     TextView resultText;
+    Button sum;
+    Button deduct;
+    Button multiply;
+    Button divide;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
         numberText1 = findViewById(R.id.numberText1);
         numberText2= findViewById(R.id.numberText2);
         resultText=findViewById(R.id.resultText);
+
+
 
 
     }
@@ -40,8 +47,14 @@ public class MainActivity extends AppCompatActivity {
 
             int result = number1 + number2;
 
+
             resultText.setText("Result: " + result);
+
+            numberText1.setText("");
+            numberText2.setText("");
         }
+
+
     }
 
     public void deduct(View view){
@@ -58,6 +71,9 @@ public class MainActivity extends AppCompatActivity {
             int result = number1 - number2;
 
             resultText.setText("Result: " + result);
+
+            numberText1.setText("");
+            numberText2.setText("");
         }
     }
 
@@ -75,6 +91,9 @@ public class MainActivity extends AppCompatActivity {
             int result = number1 * number2;
 
             resultText.setText("Result: " + result);
+
+            numberText1.setText("");
+            numberText2.setText("");
         }
     }
 
@@ -92,6 +111,9 @@ public class MainActivity extends AppCompatActivity {
             int result = number1 / number2;
 
             resultText.setText("Result: " + result);
+
+            numberText1.setText("");
+            numberText2.setText("");
         }
     }
 
