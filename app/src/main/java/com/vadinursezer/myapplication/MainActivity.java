@@ -14,10 +14,7 @@ public class MainActivity extends AppCompatActivity {
     EditText numberText1;
     EditText numberText2;
     TextView resultText;
-    Button sum;
-    Button deduct;
-    Button multiply;
-    Button divide;
+   
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
