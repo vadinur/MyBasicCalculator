@@ -30,7 +30,8 @@ public class MainActivity extends AppCompatActivity {
     public void sum(View view){
 
         if(numberText1.getText().toString() .matches("") || numberText2.getText().toString().matches("")){
-            resultText.setText(R.string.result);
+            String resultString = getResources().getString(R.string.enter_number);
+            resultText.setText(resultString);
         } else {
 
             int number1 = Integer.parseInt(numberText1.getText().toString());
@@ -44,18 +45,19 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    // FIXME ) { veya ){ seç birini :)
     public void deduct(View view){
 
         if(numberText1.getText().toString() .matches("") || numberText2.getText().toString().matches("")){
-            resultText.setText(R.string.result);
+            String resultString = getResources().getString(R.string.enter_number);
+            resultText.setText(resultString);
         } else {
 
             int number1 = Integer.parseInt(numberText1.getText().toString());
             int number2 = Integer.parseInt(numberText2.getText().toString());
             int result = number1 - number2;
 
-            resultText.setText(R.string.result);
+            String resultString = getResources().getString(R.string.result, result);
+            resultText.setText(resultString);
             numberText1.setText("");
             numberText2.setText("");
         }
@@ -64,14 +66,16 @@ public class MainActivity extends AppCompatActivity {
     public void multiply(View view){
 
         if(numberText1.getText().toString() .matches("") || numberText2.getText().toString().matches("")){
-            resultText.setText(R.string.result);
+            String resultString = getResources().getString(R.string.enter_number);
+            resultText.setText(resultString);
         } else {
 
             int number1 = Integer.parseInt(numberText1.getText().toString());
             int number2 = Integer.parseInt(numberText2.getText().toString());
             int result = number1 * number2;
 
-            resultText.setText(R.string.result);
+            String resultString = getResources().getString(R.string.result, result);
+            resultText.setText(resultString);
             numberText1.setText("");
             numberText2.setText("");
         }
@@ -80,14 +84,16 @@ public class MainActivity extends AppCompatActivity {
     public void divide(View view){
 
         if(numberText1.getText().toString() .matches("") || numberText2.getText().toString().matches("")){
-            resultText.setText(R.string.result);
+            String resultString = getResources().getString(R.string.enter_number);
+            resultText.setText(resultString);
         } else {
 
             int number1 = Integer.parseInt(numberText1.getText().toString());
             int number2 = Integer.parseInt(numberText2.getText().toString());
             int result = number1 / number2;
 
-            resultText.setText(R.string.result);
+            String resultString = getResources().getString(R.string.result, result);
+            resultText.setText(resultString);
             numberText1.setText("");
             numberText2.setText("");
         }
