@@ -2,6 +2,7 @@ package com.vadinursezer.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.res.Resources;
 import android.os.Bundle;
 // FIXME kararsız developer diyorum ben kullanılmayan bir import görünce :)
 import android.text.Editable;
@@ -36,7 +37,8 @@ public class MainActivity extends AppCompatActivity {
             int number2 = Integer.parseInt(numberText2.getText().toString());
             int result = number1 + number2;
 
-            resultText.setText(R.string.result);
+            String resultString = getResources().getString(R.string.result, result);
+            resultText.setText(resultString);
             numberText1.setText("");
             numberText2.setText("");
         }
